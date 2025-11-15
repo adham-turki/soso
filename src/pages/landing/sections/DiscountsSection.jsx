@@ -1,0 +1,56 @@
+import { useTranslation } from 'react-i18next'
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import discount1 from '../../../assets/images/discount1.png'
+import discount2 from '../../../assets/images/discount2.png'
+import discount3 from '../../../assets/images/discount3.png'
+import discount4 from '../../../assets/images/discount4.png'
+
+export function DiscountsSection() {
+  const { t } = useTranslation()
+  const { ref, isVisible } = useScrollAnimation()
+
+  const discounts = [
+    { img: discount1, title: t('discounts.today') },
+    { img: discount2, title: t('discounts.week') },
+    { img: discount3, title: t('discounts.special') },
+    { img: discount4, title: t('discounts.big') },
+  ]
+
+  return (
+    <section id="discounts-section" ref={ref} className="relative py-16 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,215,0,0.15),transparent_50%)]"></div>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 drop-shadow-lg">{t('discounts.title')}</h2>
+          <p className="text-xl text-secondary mb-6 font-semibold">{t('discounts.subtitle')}</p>
+          <div className="w-32 h-2 bg-secondary mx-auto shadow-lg"></div>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          {discounts.map((discount, idx) => (
+            <div
+              key={idx}
+              className={`group relative overflow-hidden rounded-2xl border-2 border-secondary/20 hover:border-secondary transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{ transitionDelay: isVisible ? `${idx * 150}ms` : "0ms" }}
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={discount.img}
+                  alt={discount.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-xl font-bold text-secondary">{discount.title}</h3>
+                </div>
+              </div>
+              <div className="absolute top-4 right-4 bg-secondary text-primary px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                {t('discounts.viewDetails')}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+

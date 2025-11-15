@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "services": "Services",
+    "aboutUs": "About Us",
+    "offers": "Offers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Serving Ramallah City",
+    "title": "Sudani Supermarket",
+    "titleHighlight": "Everything your home needs",
+    "description": "Join us and enjoy our daily, weekly, and monthly offers on the finest products at unbeatable prices!",
+    "cta1": "Browse Offers",
+    "cta2": "Learn More",
+    "products": "Diverse Products",
+    "customers": "Happy Customers",
+    "years": "Years Experience",
+    "offers": "Daily Offers"
+  },
+  "stats": {
+    "products": "Diverse Products",
+    "customers": "Happy Customers",
+    "years": "Years Experience",
+    "offers": "Daily Offers"
+  },
+  "about": {
+    "title": "About Us",
+    "heading": "Sudani Supermarket - Ramallah",
+    "description1": "We are Sudani Supermarket, your comprehensive store in Ramallah. We provide everything your home needs under one roof - from fresh food products to daily household necessities.",
+    "description2": "We are proud to offer the finest products at unbeatable prices, with exclusive daily, weekly, and monthly offers for our valued customers.",
+    "location": "Location: Ersal Street - Next to the Supreme Council for Youth and Sports",
+    "phone": "Phone: 02-2970968 | 0599-878188",
+    "badge": "Trusted",
+    "products": "Diverse Products",
+    "customers": "Happy Customers"
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "subtitle": "Discover what makes us the best choice for your shopping needs",
+    "dailyOffers": {
+      "title": "Daily Offers",
+      "desc": "Exclusive offers every day on various products"
+    },
+    "quality": {
+      "title": "High Quality",
+      "desc": "Finest products from the best suppliers"
+    },
+    "prices": {
+      "title": "Competitive Prices",
+      "desc": "Best prices in the local market"
+    },
+    "variety": {
+      "title": "Great Variety",
+      "desc": "Everything your home needs in one place"
+    },
+    "service": {
+      "title": "Excellent Service",
+      "desc": "Professional team to serve you"
+    },
+    "location": {
+      "title": "Prime Location",
+      "desc": "In the heart of Ramallah - easy to reach"
+    },
+    "image1Title": "Modern Supermarket",
+    "image1Desc": "Spacious and well-organized shopping experience",
+    "image2Title": "Fresh Products",
+    "image2Desc": "Daily fresh produce and quality items"
+  },
+  "discounts": {
+    "title": "Our Exclusive Offers",
+    "subtitle": "Enjoy the best offers and discounts",
+    "today": "Today's Offer",
+    "week": "Weekly Offer",
+    "special": "Special Offer",
+    "big": "Big Discounts",
+    "viewDetails": "View Details"
+  },
+  "products": {
+    "title": "Our Store",
+    "subtitle": "Discover our diverse sections",
+    "heading": "Diverse Sections",
+    "description": "At Sudani Supermarket, we offer you a comprehensive range of sections to meet all your needs. From basic food items to fresh products, canned goods, beverages, and household supplies.",
+    "items": {
+      "food": "Food Items",
+      "fresh": "Fresh Products",
+      "drinks": "Beverages",
+      "household": "Household Supplies",
+      "health": "Health Products",
+      "toys": "Children's Toys"
+    }
+  },
+  "vegetables": {
+    "title": "Vegetables & Fruits Section",
+    "subtitle": "Fresh daily from farm to your home",
+    "heading": "Fresh Vegetables & Fruits",
+    "description1": "At Sudani Supermarket, we are committed to providing the finest types of fresh vegetables and fruits daily. Our dedicated vegetables and fruits section offers you a wide range of seasonal and fresh products.",
+    "description2": "We guarantee quality and freshness in every product, with competitive prices and special offers on vegetables and fruits.",
+    "fresh": "Fresh Daily",
+    "competitive": "Competitive Prices"
+  },
+  "cta": {
+    "title": "Visit Us Today!",
+    "description": "Enjoy the best offers and products at Sudani Supermarket",
+    "call": "Call Us: 02-2970968",
+    "mobile": "Mobile: 0599-878188"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple steps to enjoy the best shopping experience",
+    "step1": {
+      "title": "Visit Our Store",
+      "description": "Come to our location in Ramallah and explore our wide selection"
+    },
+    "step2": {
+      "title": "Browse Products",
+      "description": "Discover our diverse range of products and daily offers"
+    },
+    "step3": {
+      "title": "Choose Your Items",
+      "description": "Select from fresh produce, groceries, and household essentials"
+    },
+    "step4": {
+      "title": "Enjoy Great Prices",
+      "description": "Get the best value with our competitive prices and special offers"
+    }
+  },
+  "shopping": {
+    "badge": "Easy Shopping",
+    "title": "Shop with",
+    "titleHighlight": "Ease & Convenience",
+    "description": "Experience the ultimate shopping convenience at Sudani Supermarket. From fresh produce to daily essentials, we make shopping simple and enjoyable for everyone.",
+    "feature1": {
+      "title": "Wide Selection",
+      "desc": "Browse through thousands of products from various categories"
+    },
+    "feature2": {
+      "title": "Best Prices",
+      "desc": "Enjoy competitive prices and exclusive offers every day"
+    },
+    "feature3": {
+      "title": "Easy Access",
+      "desc": "Located in the heart of Ramallah for your convenience"
+    },
+    "button": "Start Shopping"
+  },
+  "footer": {
+    "tagline": "Sudani Supermarket - Everything your home needs under one roof",
+    "contactInfo": "Contact Information",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "offers": "Offers",
+    "contact": "Contact",
+    "copyright": "All rights reserved."
+  }
+}
+
