@@ -76,7 +76,7 @@ export default function ShoppingSection() {
 
           {/* Right side - Lottie Animation */}
           <div
-            className={`hidden lg:flex items-center justify-center transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
+            className={`flex items-center justify-center transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
           >
             <div className="relative w-full max-w-md">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-black/10 rounded-3xl blur-3xl"></div>
