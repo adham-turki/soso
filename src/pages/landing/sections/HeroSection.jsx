@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useCountUp } from "@/hooks/use-count-up"
-import { HiBuildingStorefront } from "react-icons/hi2"
+import Lottie from 'lottie-react'
+import emptyAnimation from '../../../assets/Empty.json'
 import sudaniImage from '../../../assets/images/sudani.png';
 
 export default function HeroSection() {
@@ -50,64 +51,64 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="group relative px-8 py-4 bg-secondary text-primary font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,215,0,0.6)]">
-                <span className="relative z-10 flex items-center gap-2">
+              <button className="group relative px-8 py-4 bg-secondary text-primary font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,0,0,0.6)] hover:bg-gray-800 hover:text-white">
+                <span className="relative z-10 flex items-center justify-center sm:justify-start gap-2">
                   {t("hero.cta1")}
                   <svg className={`w-5 h-5 transform transition-transform ${isRTL ? 'scale-x-[-1] group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-secondary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              <button className="group relative px-8 py-4 bg-black/30 text-white font-bold rounded-lg border border-secondary/40 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:border-secondary/60 hover:bg-black/50">
+              <button className="group relative px-8 py-4 bg-black/30 text-white font-bold rounded-lg border border-secondary/40 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:border-gray-700 hover:bg-black/50">
                 <span className="relative z-10">{t("hero.cta2")}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-secondary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-800/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-8 md:gap-12 pt-8 border-t border-secondary/30">
-              <div className="group relative min-w-[120px]">
-                <div className="absolute -inset-2 bg-secondary/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="flex flex-nowrap md:flex-wrap justify-center gap-3 md:gap-8 lg:gap-12 pt-8 border-t border-secondary/30 overflow-x-auto">
+              <div className="group relative flex-shrink-0 min-w-[70px] md:min-w-[120px]">
+                <div className="absolute -inset-2 bg-gray-800/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
-                  <div className="text-4xl md:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
-                    <span className="inline-block min-w-[100px] text-left">
+                  <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
+                    <span className="inline-block min-w-[60px] md:min-w-[100px] text-left">
                       {products >= 1000 ? `${(products / 1000).toFixed(1)}K` : products}+
                     </span>
                   </div>
-                  <div className="text-sm text-gray-300 mt-1">{t("hero.products")}</div>
+                  <div className="text-xs md:text-sm text-gray-300 mt-1">{t("hero.products")}</div>
                 </div>
               </div>
-              <div className="group relative min-w-[120px]">
-                <div className="absolute -inset-2 bg-secondary/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group relative flex-shrink-0 min-w-[70px] md:min-w-[120px]">
+                <div className="absolute -inset-2 bg-gray-800/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
-                  <div className="text-4xl md:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
-                    <span className="inline-block min-w-[100px] text-left">
+                  <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
+                    <span className="inline-block min-w-[60px] md:min-w-[100px] text-left">
                       {customers >= 1000 ? `${(customers / 1000).toFixed(1)}K` : customers}+
                     </span>
                   </div>
-                  <div className="text-sm text-gray-300 mt-1">{t("hero.customers")}</div>
+                  <div className="text-xs md:text-sm text-gray-300 mt-1">{t("hero.customers")}</div>
                 </div>
               </div>
-              <div className="group relative min-w-[120px]">
-                <div className="absolute -inset-2 bg-secondary/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group relative flex-shrink-0 min-w-[70px] md:min-w-[120px]">
+                <div className="absolute -inset-2 bg-gray-800/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
-                  <div className="text-4xl md:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
-                    <span className="inline-block min-w-[100px] text-left">
+                  <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
+                    <span className="inline-block min-w-[60px] md:min-w-[100px] text-left">
                       {years}+
                     </span>
                   </div>
-                  <div className="text-sm text-gray-300 mt-1">{t("hero.years")}</div>
+                  <div className="text-xs md:text-sm text-gray-300 mt-1">{t("hero.years")}</div>
                 </div>
               </div>
-              <div className="group relative min-w-[120px]">
-                <div className="absolute -inset-2 bg-secondary/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group relative flex-shrink-0 min-w-[70px] md:min-w-[120px]">
+                <div className="absolute -inset-2 bg-gray-800/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
-                  <div className="text-4xl md:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
-                    <span className="inline-block min-w-[100px] text-left">
+                  <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-secondary transition-all duration-300 group-hover:scale-110 tabular-nums" dir="ltr">
+                    <span className="inline-block min-w-[60px] md:min-w-[100px] text-left">
                       {dailyOffers}
                     </span>
                   </div>
-                  <div className="text-sm text-gray-300 mt-1">{t("hero.offers")}</div>
+                  <div className="text-xs md:text-sm text-gray-300 mt-1">{t("hero.offers")}</div>
                 </div>
               </div>
             </div>
@@ -116,18 +117,14 @@ export default function HeroSection() {
           <div
             className={`hidden lg:flex items-center justify-center transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
           >
-            <div className={`relative w-full max-w-sm flex items-center justify-center ${isRTL ? 'mr-60' : 'ml-60'}`}>
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-black/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="relative z-10">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-secondary/20 rounded-full blur-2xl"></div>
-                  <div className="relative bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-full p-20 border-4 border-secondary/30 backdrop-blur-sm">
-                    <HiBuildingStorefront className="w-72 h-72 text-secondary drop-shadow-2xl" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-32 h-32 bg-secondary/20 rounded-full blur-2xl animate-pulse"></div>
-                    </div>
-                  </div>
-                </div>
+            <div className={`flex items-center justify-center `}>
+              <div className="w-[650px] h-[650px]">
+                <Lottie
+                  animationData={emptyAnimation}
+                  loop={true}
+                  autoplay={true}
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>

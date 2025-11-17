@@ -54,27 +54,31 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3 absolute left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => scrollToSection('features-section')}
-              className="px-5 py-2.5 text-lg text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="group relative px-5 py-2.5 text-lg text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md overflow-hidden"
             >
-              {t("navbar.services")}
+              <span className="relative z-10">{t("navbar.services")}</span>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </button>
             <button
               onClick={() => scrollToSection('about-section')}
-              className="px-5 py-2.5 text-lg text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="group relative px-5 py-2.5 text-lg text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md overflow-hidden"
             >
-              {t("navbar.aboutUs")}
+              <span className="relative z-10">{t("navbar.aboutUs")}</span>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </button>
             <button
               onClick={() => scrollToSection('discounts-section')}
-              className="px-5 py-2.5 text-lg text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="group relative px-5 py-2.5 text-lg text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md overflow-hidden"
             >
-              {t("navbar.offers")}
+              <span className="relative z-10">{t("navbar.offers")}</span>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </button>
             <button
               onClick={() => scrollToSection('cta-section')}
-              className="px-5 py-2.5 text-lg text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="group relative px-5 py-2.5 text-lg text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md overflow-hidden"
             >
-              {t("navbar.contact")}
+              <span className="relative z-10">{t("navbar.contact")}</span>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </button>
           </div>
 
@@ -84,16 +88,17 @@ export default function Navbar() {
             <div className="relative" ref={langDropdownRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg border border-gray-200 transition-all duration-300"
+                className="group relative flex items-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden"
               >
-                <span>{i18n.language === 'ar' ? 'عربي' : 'EN'}</span>
-                <HiChevronDown className={`w-4 h-4 transition-transform duration-300 ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
+                <span className="relative z-10">{i18n.language === 'ar' ? 'عربي' : 'EN'}</span>
+                <HiChevronDown className={`w-4 h-4 transition-transform duration-300 relative z-10 ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
               {isLangDropdownOpen && (
                 <div className={`absolute top-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50 min-w-[120px] ${isRTL ? 'left-0' : 'right-0'}`}>
                   <button
                     onClick={() => changeLanguage('en')}
-                    className={`w-full px-4 py-2 text-sm font-semibold ${isRTL ? 'text-right' : 'text-left'} hover:bg-secondary/10 transition-colors ${i18n.language === 'en' ? 'bg-secondary/10 text-secondary' : 'text-gray-700'}`}
+                    className={`w-full px-4 py-2 text-sm font-semibold ${isRTL ? 'text-right' : 'text-left'} hover:bg-gray-100 transition-colors ${i18n.language === 'en' ? 'bg-gray-100 text-gray-800' : 'text-gray-700'}`}
                   >
                     EN
                   </button>
@@ -128,25 +133,25 @@ export default function Navbar() {
           <div className="md:hidden pb-4 space-y-3 border-t-2 border-gray-200 pt-4">
             <button
               onClick={() => scrollToSection('about-section')}
-              className="w-full px-6 py-3 text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="w-full px-6 py-3 text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               {t("navbar.aboutUs")}
             </button>
             <button
               onClick={() => scrollToSection('features-section')}
-              className="w-full px-6 py-3 text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="w-full px-6 py-3 text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               {t("navbar.services")}
             </button>
             <button
               onClick={() => scrollToSection('discounts-section')}
-              className="w-full px-6 py-3 text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="w-full px-6 py-3 text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               {t("navbar.offers")}
             </button>
             <button
               onClick={() => scrollToSection('cta-section')}
-              className="w-full px-6 py-3 text-gray-700 hover:text-secondary font-semibold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+              className="w-full px-6 py-3 text-gray-700 hover:text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               {t("navbar.contact")}
             </button>
@@ -156,16 +161,17 @@ export default function Navbar() {
               <div className="relative" ref={langDropdownRef}>
                 <button
                   onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                  className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg border border-gray-200 transition-all duration-300"
+                  className="group relative w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg border border-gray-200 transition-all duration-300 hover:scale-[1.02] hover:shadow-md overflow-hidden"
                 >
-                  <span>{i18n.language === 'ar' ? 'عربي' : 'EN'}</span>
-                  <HiChevronDown className={`w-4 h-4 transition-transform duration-300 ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
+                  <span className="relative z-10">{i18n.language === 'ar' ? 'عربي' : 'EN'}</span>
+                  <HiChevronDown className={`w-4 h-4 transition-transform duration-300 relative z-10 ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
                 {isLangDropdownOpen && (
                   <div className="absolute top-full mt-2 left-0 right-0 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50">
                     <button
                       onClick={() => changeLanguage('en')}
-                      className={`w-full px-4 py-2 text-sm font-semibold ${isRTL ? 'text-right' : 'text-left'} hover:bg-secondary/10 transition-colors ${i18n.language === 'en' ? 'bg-secondary/10 text-secondary' : 'text-gray-700'}`}
+                      className={`w-full px-4 py-2 text-sm font-semibold ${isRTL ? 'text-right' : 'text-left'} hover:bg-gray-100 transition-colors ${i18n.language === 'en' ? 'bg-gray-100 text-gray-800' : 'text-gray-700'}`}
                     >
                       EN
                     </button>

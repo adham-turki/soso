@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src={logo} alt="Sudani Logo" className="h-12 w-auto brightness-0 invert" />
+              <img src={logo} alt="Sudani Logo" className="h-12 w-auto" />
             </div>
             <p className="text-white/80 leading-relaxed text-sm">
               {t("footer.tagline")}
@@ -27,7 +27,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-white/80 hover:text-secondary transition-colors text-sm font-medium">
+                  <a href="#" className="text-white/80 hover:text-gray-300 transition-colors text-sm font-medium">
                     {t(`footer.${link}`)}
                   </a>
                 </li>

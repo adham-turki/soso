@@ -20,20 +20,20 @@ export function Hero() {
                 <div className="mb-8 animate-fade-in-down">
                     <img src={logo} alt="Logo" className="h-40 w-auto mx-auto mb-8 drop-shadow-2xl" />
                 </div>
-                <h2 className="text-6xl md:text-8xl font-black text-secondary mb-6 animate-fade-in-up drop-shadow-lg">
+                <h2 className="text-6xl md:text-8xl font-black text-white mb-6 animate-fade-in-up drop-shadow-lg">
                     {t('hero.title')}
                 </h2>
                 <p className="text-3xl md:text-5xl text-secondary mb-6 font-bold animate-fade-in-up animation-delay-200 drop-shadow-lg">
                     {t('hero.subtitle')}
                 </p>
-                <p className="text-xl md:text-2xl text-secondary mb-10 max-w-3xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed font-medium">
+                <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed">
                     {t('hero.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up animation-delay-600">
-                    <a href="#discounts" className="bg-secondary text-primary px-10 py-5 rounded-full font-black text-xl hover:bg-secondary-light transition-all transform hover:scale-110 shadow-2xl hover:shadow-secondary/50 border-4 border-secondary/20">
+                    <a href="#discounts" className="bg-secondary text-primary px-10 py-5 rounded-full font-black text-xl hover:bg-gray-800 hover:text-white transition-all transform hover:scale-110 shadow-2xl hover:shadow-gray-800/50 border-4 border-secondary/20">
                         {t('hero.cta1')}
                     </a>
-                    <a href="#about" className="bg-transparent border-4 border-secondary text-secondary px-10 py-5 rounded-full font-black text-xl hover:bg-secondary/20 transition-all transform hover:scale-110 shadow-2xl hover:shadow-secondary/50">
+                    <a href="#about" className="bg-white text-primary px-10 py-5 rounded-full font-black text-xl hover:bg-gray-100 transition-all transform hover:scale-110 shadow-2xl border-4 border-white/20">
                         {t('hero.cta2')}
                     </a>
                 </div>

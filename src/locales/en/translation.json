@@ -105,23 +105,23 @@
     "mobile": "Mobile: 0599-878188"
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Simple steps to enjoy the best shopping experience",
+    "title": "Our Store Sections",
+    "subtitle": "Discover our wide variety of departments and products",
     "step1": {
-      "title": "Visit Our Store",
-      "description": "Come to our location in Ramallah and explore our wide selection"
+      "title": "Food & Groceries Section",
+      "description": "Comprehensive range of basic food items and canned goods from the best international and local brands"
     },
     "step2": {
-      "title": "Browse Products",
-      "description": "Discover our diverse range of products and daily offers"
+      "title": "Fresh Products Section",
+      "description": "Daily fresh vegetables and fruits, fresh meats, cheeses and dairy products, and fresh baked goods from our bakery"
     },
     "step3": {
-      "title": "Choose Your Items",
-      "description": "Select from fresh produce, groceries, and household essentials"
+      "title": "Household Supplies Section",
+      "description": "Everything you need for your home including cleaning supplies, household items, and electrical appliances at competitive prices"
     },
     "step4": {
-      "title": "Enjoy Great Prices",
-      "description": "Get the best value with our competitive prices and special offers"
+      "title": "Beverages & Consumables Section",
+      "description": "Cold and hot beverages, sweets, snacks, and various health products"
     }
   },
   "shopping": {

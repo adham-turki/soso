@@ -32,19 +32,19 @@ export function Header() {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#home" className="text-primary hover:text-secondary transition-colors font-semibold">
+            <a href="#home" className="text-primary hover:text-gray-800 transition-colors font-semibold">
               {t('header.home')}
             </a>
-            <a href="#about" className="text-primary hover:text-secondary transition-colors font-semibold">
+            <a href="#about" className="text-primary hover:text-gray-800 transition-colors font-semibold">
               {t('header.about')}
             </a>
-            <a href="#discounts" className="text-primary hover:text-secondary transition-colors font-semibold">
+            <a href="#discounts" className="text-primary hover:text-gray-800 transition-colors font-semibold">
               {t('header.discounts')}
             </a>
-            <a href="#products" className="text-primary hover:text-secondary transition-colors font-semibold">
+            <a href="#products" className="text-primary hover:text-gray-800 transition-colors font-semibold">
               {t('header.products')}
             </a>
-            <a href="#contact" className="bg-secondary text-primary px-6 py-2 rounded-full font-bold hover:bg-secondary-light transition-all transform hover:scale-105">
+            <a href="#contact" className="bg-secondary text-primary px-6 py-2 rounded-full font-bold hover:bg-gray-800 hover:text-white transition-all transform hover:scale-105">
               {t('header.contact')}
             </a>
             <div className="flex gap-2">

@@ -8,7 +8,7 @@ export function DiscountCard({ discount, delay }) {
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_rgba(255,215,0,0.5)] border-4 border-secondary/30 hover:border-secondary ${
+      className={`group relative overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_rgba(0,0,0,0.5)] border-4 border-secondary/30 hover:border-gray-800 ${
         isIntersecting ? 'animate-scale-in' : 'opacity-0'
       }`}
       style={{ animationDelay: `${delay}ms` }}
@@ -20,12 +20,12 @@ export function DiscountCard({ discount, delay }) {
           className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
       <div className="absolute inset-0 z-10 flex flex-col justify-end p-6">
         <div className="transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-500">
-          <h3 className="text-3xl font-black text-secondary mb-4 drop-shadow-2xl">{discount.title}</h3>
-          <button className="bg-secondary text-primary px-8 py-4 rounded-full font-black text-lg hover:bg-secondary-light transition-all transform hover:scale-105 shadow-xl border-4 border-secondary/30">
+          <h3 className="text-3xl font-black text-white mb-4 drop-shadow-2xl">{discount.title}</h3>
+          <button className="bg-secondary text-primary px-8 py-4 rounded-full font-black text-lg hover:bg-gray-800 hover:text-white transition-all transform hover:scale-105 shadow-xl border-4 border-secondary/30">
             {t('discounts.viewDetails')}
           </button>
         </div>
