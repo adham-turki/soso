@@ -32,6 +32,18 @@ export default function HeroSection() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 px-6 sm:px-8 py-12 pt-24">
+        {/* Lottie in top corner */}
+        <div className={`absolute top-14 ${isRTL ? 'left-4' : 'right-4'} z-20 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
+          <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px]">
+            <Lottie
+              animationData={emptyAnimation}
+              loop={true}
+              autoplay={true}
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div
             className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
@@ -66,7 +78,7 @@ export default function HeroSection() {
               </button>
             </div>
 
-            <div className="flex flex-nowrap md:flex-wrap justify-center gap-3 md:gap-8 lg:gap-12 pt-8 border-t border-secondary/30 overflow-x-auto">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-8 lg:gap-12 pt-8 border-t border-secondary/30">
               <div className="group relative flex-shrink-0 min-w-[70px] md:min-w-[120px]">
                 <div className="absolute -inset-2 bg-gray-800/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
@@ -114,20 +126,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div
-            className={`hidden lg:flex items-center justify-center transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
-          >
-            <div className={`flex items-center justify-center `}>
-              <div className="w-[650px] h-[650px]">
-                <Lottie
-                  animationData={emptyAnimation}
-                  loop={true}
-                  autoplay={true}
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

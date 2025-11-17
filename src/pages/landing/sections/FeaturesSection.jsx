@@ -155,25 +155,25 @@ export default function FeaturesSection() {
               return (
                 <div
                   key={index}
-                  className={`group relative p-10 rounded-2xl bg-white border-2 border-gray-200 hover:border-gray-800 hover:shadow-2xl transition-all duration-300 ${isVisible ? 'card-animate' : 'opacity-0'
+                  className={`group relative p-4 md:p-6 lg:p-10 rounded-2xl bg-white border-2 border-gray-200 hover:border-gray-800 hover:shadow-2xl transition-all duration-300 ${isVisible ? 'card-animate' : 'opacity-0'
                     }`}
                   style={{
                     animationDelay: isVisible ? `${delay}s` : '0s',
                   }}
                 >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-black/5 rounded-bl-3xl group-hover:bg-gray-800/5 transition-colors"></div>
+                  <div className="absolute top-0 right-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-black/5 rounded-bl-3xl group-hover:bg-gray-800/5 transition-colors"></div>
 
                   <div className="relative z-10">
-                    <span className="text-7xl font-black text-gray-300 group-hover:text-gray-800/20 transition-colors" dir="ltr">
+                    <span className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-300 group-hover:text-gray-800/20 transition-colors" dir="ltr">
                       {feature.number}
                     </span>
-                    <h3 className="text-2xl font-bold text-gray-900 mt-4 mb-3 flex items-center gap-3">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 md:mt-3 lg:mt-4 mb-2 md:mb-3 flex items-center gap-2 md:gap-3">
                       {IconComponent && (
-                        <IconComponent className="w-6 h-6 text-secondary group-hover:scale-110 transition-transform" />
+                        <IconComponent className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-secondary group-hover:scale-110 transition-transform" />
                       )}
                       {t(`features.${feature.key}.title`)}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">{t(`features.${feature.key}.desc`)}</p>
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">{t(`features.${feature.key}.desc`)}</p>
                   </div>
                 </div>
               )
